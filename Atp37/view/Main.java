@@ -36,7 +36,7 @@ public class Main {
 
         prato.delete(p1);
         for (Prato pp1 : prato.read()) {
-            System.out.println("\nDeletado!");
+            System.out.printf("\nProduto Deletado.");
         }
     }
 }

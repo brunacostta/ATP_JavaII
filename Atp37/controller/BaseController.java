@@ -27,5 +27,4 @@ public class BaseController <T> {
     public void delete(T obj) {
         this.dados.remove(obj);
     }
-
 }
