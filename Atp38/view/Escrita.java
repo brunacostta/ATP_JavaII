@@ -8,13 +8,16 @@ import java.io.OutputStreamWriter;
 
 public class Escrita {
     public static void main(String[] args) {
+
+        //criando fluxo de saída através de um arquivo.
         try {
             FileOutputStream fos = new FileOutputStream("Atp38/dados/escrita.txt");
-            OutputStreamWriter osw = new OutputStreamWriter(fos);
 
-            //fluxo e um buffer de escrita
+            //leitor fluxo e um buffer de escrita
+            OutputStreamWriter osw = new OutputStreamWriter(fos);
             BufferedWriter bw = new BufferedWriter(osw);
 
+            //Com o buffer, escreva algumas linhas dentro do arquivo texto.
             bw.write("O Rato roeu");
             bw.write("\na roupa do rei");
             bw.write("\nde Roma.");

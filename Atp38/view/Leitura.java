@@ -17,6 +17,8 @@ public class Leitura {
             //leitor de fluxo e um buffer de leitura
             InputStreamReader isr = new InputStreamReader(fis);
             BufferedReader br = new BufferedReader(isr);
+
+            //Com o buffer, imprima as linhas do arquivo no console.
             while (br.ready()) {
                 String linha = br.readLine();
                 System.out.println(linha);
