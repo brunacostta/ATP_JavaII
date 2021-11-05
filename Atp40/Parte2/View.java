@@ -1,24 +1,18 @@
 package Atp40.Parte2;
 
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class View {
-    private static String filename = "Atp40/Parte2/PontosTuristicos.csv";
     public static void main(String[] args) {
-        PontosTuristicos pt = new PontosTuristicos();
+        PontoTuristico pt = new PontoTuristico();
         pt.nome = "Centro Histórico";
+        pt.descricao = "Principal ponto turistico";
         pt.localizacao = "Ilhabela";
-        pt.descricao = "Principal ponto turistico de Ilhabela. Com comercio, museus e lojas";
-
+        PontosTuristicos controller = new PontosTuristicos();
+        String retorno = controller .salva(pt.nome, pt.descricao, pt.localizacao);
+        System.out.println(retorno);
         
-        try {
-            FileWriter fw = new FileWriter(filename, true);
-            String pontosTuristicoString = String.format("%s;%s;%s\n", pt.nome, pt.localizacao, pt.descricao);
-            fw.write(pontosTuristicoString);
-            fw.close();
-        } catch (IOException e) {
-            System.out.println("Não foi possível abrir o arquivo.");
+        
+        for (PontoTuristico pto : controller.ler()) {
+            System.out.printf("%s;%s;%s\n", pto.nome, pto.descricao, pto.localizacao);
         }
     }
 }
