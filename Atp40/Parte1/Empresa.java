@@ -1,4 +1,4 @@
-package Atp40;
+package Atp40.Parte1;
 
 //Crie um sistema para cadastro de Empresas. A empresa deve possuir três atributos públicos: nome, cnpj e ramo de atividade
 public class Empresa {
