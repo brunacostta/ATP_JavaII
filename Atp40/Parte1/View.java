@@ -37,7 +37,6 @@ public class View {
 
                 //Quebrando uma linha em partes, de acordo com o separador
                 String[] empresaStrings = linha.split(";");
-                System.out.println(empresaStrings);
                 
                 //DAO - String --> Object
                 Empresa emp = new Empresa();
