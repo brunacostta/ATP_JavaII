@@ -2,7 +2,7 @@ package Atp37.controller;
 
 import java.util.ArrayList;
 
-public class BaseController <T> {
+public abstract class BaseController <T> {
     ArrayList<T> dados;
 
     public BaseController() {
